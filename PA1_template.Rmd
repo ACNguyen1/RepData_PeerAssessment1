@@ -6,8 +6,15 @@ unzip(zipfile="repdata%2Fdata%2Factivity.zip")
 activityData <- read.csv("activity.csv")
 
 ## What is mean total number of steps taken per day?
-
-
+### 1. Calculate the total number of steps taken per day
+totalStepsPerDay <- tapply(activityData$steps, activityData$date, FUN=sum, na.rm=TRUE)
+##
+### 2. Make a histogram of the total number of steps taken each day
+hist(totalStepsPerDay, main=paste("Histogram of Total number of steps taken each day"),xlab="Total number of steps", ylab="Interval")
+##
+### 3. Calculate and report the mean and median of the total number of steps taken per day
+mean(totalStepsPerDay, na.rm=TRUE)
+median(totalStepsPerDay, na.rm=TRUE)
 
 ## What is the average daily activity pattern?
 
