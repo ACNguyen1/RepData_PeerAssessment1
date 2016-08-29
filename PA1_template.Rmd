@@ -24,7 +24,7 @@ plot(names(avgStepsInt), avgStepsPerInterval, type="l", main = "Time Series Plot
 ##
 ### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 print(paste0("Interval ", as.numeric(names(which.max(avgStepsInt))) , " contains the maximum number of steps."))
-# Plot a vertical line where the max interval locates
+### Plot a vertical line where the max interval locates
 abline(v=as.numeric(names(which.max(avgStepsInt))), col="red", lwd=3)
 
 ## Imputing missing values
