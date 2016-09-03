@@ -154,5 +154,3 @@ ggplot(avgStepsPerDay, aes(interval, steps)) + geom_line() + facet_grid(dayOfWk 
 ```
 
 ![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png)
-
-
